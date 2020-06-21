@@ -50,6 +50,7 @@ Multer.prototype._makeMiddleware = function (fields, fileStrategy) {
       limits: this.limits,
       preservePath: this.preservePath,
       storage: this.storage,
+      compressPdf: this.compressPdf,
       fileFilter: wrappedFileFilter,
       fileStrategy: fileStrategy
     }
