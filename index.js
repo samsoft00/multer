@@ -1,6 +1,7 @@
 var makeMiddleware = require('./lib/make-middleware')
 
 var diskStorage = require('./storage/disk')
+var compressPdf = require('./lib/compress-pdf')
 var memoryStorage = require('./storage/memory')
 var MulterError = require('./lib/multer-error')
 
@@ -12,11 +13,12 @@ function Multer (options) {
   if (options.storage) {
     this.storage = options.storage
   } else if (options.dest) {
-    this.storage = diskStorage({ destination: options.dest })
+    this.storage = diskStorage({ dest: options.dest })
   } else {
     this.storage = memoryStorage()
   }
 
+  this.compressPdf = compressPdf({ destination: options.dest })
   this.limits = options.limits
   this.preservePath = options.preservePath
   this.fileFilter = options.fileFilter || allowAll
@@ -99,6 +101,7 @@ function multer (options) {
 }
 
 module.exports = multer
+module.exports.compressPdf = compressPdf
 module.exports.diskStorage = diskStorage
 module.exports.memoryStorage = memoryStorage
 module.exports.MulterError = MulterError

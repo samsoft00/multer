@@ -22,9 +22,13 @@
     "append-field": "^1.0.0",
     "busboy": "^0.2.11",
     "concat-stream": "^1.5.2",
+    "fs-extra": "^9.0.1",
+    "ghostscript4js": "^3.2.1",
+    "is-url": "^1.2.4",
     "mkdirp": "^0.5.4",
     "object-assign": "^4.1.1",
     "on-finished": "^2.3.0",
+    "request": "^2.88.2",
     "type-is": "^1.6.4",
     "xtend": "^4.0.0"
   },
