@@ -24,6 +24,7 @@
     "concat-stream": "^1.5.2",
     "fs-extra": "^9.0.1",
     "ghostscript4js": "^3.2.1",
+    "into-stream": "^5.1.1",
     "is-url": "^1.2.4",
     "mkdirp": "^0.5.4",
     "object-assign": "^4.1.1",
